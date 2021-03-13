@@ -14,7 +14,7 @@ public class FizzBuzzTest {
 
         Thread threadA = new Thread(() -> {
             try {
-                fizzBuzz.fizz(printFizz);
+                fizzBuzz.displayFizz(printFizz);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -22,7 +22,7 @@ public class FizzBuzzTest {
 
         Thread threadB = new Thread(() -> {
             try {
-                fizzBuzz.buzz(printBuzz);
+                fizzBuzz.displayBuzz(printBuzz);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -30,7 +30,7 @@ public class FizzBuzzTest {
 
         Thread threadC = new Thread(() -> {
             try {
-                fizzBuzz.fizzbuzz(printFizzBuzz);
+                fizzBuzz.displayFizzbuzz(printFizzBuzz);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -38,7 +38,7 @@ public class FizzBuzzTest {
 
         Thread threadD = new Thread(() -> {
             try {
-                fizzBuzz.number(printNumber);
+                fizzBuzz.displayNumber(printNumber);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -9,7 +9,7 @@ class FizzBuzz {
         this.endNumber = endNumber;
     }
 
-    public synchronized void fizz(Runnable printFizz) throws InterruptedException {
+    public synchronized void displayFizz(Runnable printFizz) throws InterruptedException {
         while(startNumber <= endNumber) {
             if(startNumber % 3 == 0 && startNumber % 5 != 0) {
                 printFizz.run();
@@ -21,7 +21,7 @@ class FizzBuzz {
         }
     }
 
-    public synchronized void buzz(Runnable printBuzz) throws InterruptedException {
+    public synchronized void displayBuzz(Runnable printBuzz) throws InterruptedException {
         while(startNumber <= endNumber) {
             if(startNumber % 3 != 0 && startNumber % 5 == 0) {
                 printBuzz.run();
@@ -33,7 +33,7 @@ class FizzBuzz {
         }
     }
 
-    public synchronized void fizzbuzz(Runnable printFizzBuzz) throws InterruptedException {
+    public synchronized void displayFizzbuzz(Runnable printFizzBuzz) throws InterruptedException {
         while(startNumber <= endNumber) {
             if(startNumber % 15 == 0) {
                 printFizzBuzz.run();
@@ -45,7 +45,7 @@ class FizzBuzz {
         }
     }
 
-    public synchronized void number(IntConsumer printNumber) throws InterruptedException {
+    public synchronized void displayNumber(IntConsumer printNumber) throws InterruptedException {
         while(startNumber <= endNumber) {
             if(startNumber % 3 != 0 && startNumber % 5 != 0) {
                 printNumber.accept(startNumber);
